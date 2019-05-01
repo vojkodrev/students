@@ -1,0 +1,19 @@
+version: '3.7'
+services:
+
+  mongo:
+    image: "mongo"
+    container_name: mongo-students
+    volumes:
+      - "./mongodb:/data/db"
+    ports:
+      - "27017:27017"
+
+
+  rest:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongo
+
