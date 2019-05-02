@@ -25,18 +25,12 @@ public class StudentsApplication implements CommandLineRunner {
 
 	Logger logger = LoggerFactory.getLogger(StudentsApplication.class);
 
-//	@Autowired
-//	private MongoOperations mongoOperations;
-
 	public static void main(String[] args) {
 		SpringApplication.run(StudentsApplication.class, args);
 	}
 
 	@Override
 	public void run(String... args) throws Exception {
-//		System.out.println((mongoOperations.toString());
-//		studentRepository.deleteAll();
-//		studentClassRepository.deleteAll();
 
 		try {
 			if (studentRepository.count() == 0) {
@@ -55,42 +49,6 @@ public class StudentsApplication implements CommandLineRunner {
 			logger.warn("Unable to populate students");
 		}
 
-
-
-
-//		System.out.println("Student found with findAll():");
-//		System.out.println("-------------------------------");
-//		for (Student student : studentRepository.findAll()) {
-//			System.out.println(student);
-//		}
-//		System.out.println();
-//
-//		System.out.println("Student classes found with findAll():");
-//		System.out.println("-------------------------------");
-//		for (StudentClass studentClass : studentClassRepository.findAll()) {
-//			System.out.println(studentClass);
-//		}
-//		System.out.println();
-//
-//
-//
-//		System.out.println("Student classes found by name like:");
-//		System.out.println("-------------------------------");
-//		for (StudentClass foundClass : studentClassRepository.findByNameLikeIgnoreCase("s1")) {
-//			System.out.println(foundClass);
-//		}
-//		System.out.println();
-
-//		// fetch an individual customer
-//		System.out.println("Customer found with findByFirstName('Alice'):");
-//		System.out.println("--------------------------------");
-//		System.out.println(studentRepository.findByFirstName("Alice"));
-//
-//		System.out.println("Customers found with findByLastName('Smith'):");
-//		System.out.println("--------------------------------");
-//		for (Customer customer : studentRepository.findByLastName("Smith")) {
-//			System.out.println(customer);
-//		}
 	}
 }
 

@@ -18,11 +18,6 @@ import java.util.Optional;
 @Service
 public class StudentService {
 
-//  Logger logger = LoggerFactory.getLogger(StudentService.class);
-//
-//  @Autowired
-//  MongoOperations mongoOperations;
-
   @Autowired
   private StudentRepository studentRepository;
 
