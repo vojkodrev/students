@@ -12,10 +12,10 @@ public class StudentController {
   @Autowired
   StudentService studentService;
 
-	@GetMapping("/classes")
-	public List<String> getClasses() {
-		return studentService.getClassNames();
-	}
+  @GetMapping("/classes")
+  public List<String> getClasses() {
+    return studentService.getClassNames();
+  }
 
   @GetMapping("/findClass/{search}")
   public List<String> findClass(@PathVariable String search) {
